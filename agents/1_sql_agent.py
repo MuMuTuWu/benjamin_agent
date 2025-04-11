@@ -3,9 +3,6 @@ from langchain_openai import ChatOpenAI
 from langchain.schema import HumanMessage, SystemMessage
 from langchain.callbacks.base import BaseCallbackHandler
 
-import time
-import simplejson as json
-
 if not st.session_state.clickhouse_password:
     st.warning("Please enter your ClickHouse password")
 
