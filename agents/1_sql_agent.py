@@ -4,7 +4,7 @@ from langchain.schema import HumanMessage, SystemMessage
 from langchain.callbacks.base import BaseCallbackHandler
 
 if not st.session_state.clickhouse_password:
-    st.warning("Please enter your ClickHouse password")
+    st.warning("⚠️ Please enter your ClickHouse password")
 
 # Define system prompt
 system_prompt = """You are a professional SQL query assistant, specialized in helping users write and optimize ClickHouse database queries.
@@ -26,7 +26,7 @@ if st.session_state.openai_api_key:
         streaming=True  # Enable streaming output
     )
 else:
-    st.warning("Please enter your DeepSeek API Key")
+    st.warning("⚠️ Please enter your DeepSeek API Key")
 
 # Create streaming output callback handler
 class StreamHandler(BaseCallbackHandler):
@@ -40,19 +40,18 @@ class StreamHandler(BaseCallbackHandler):
         self.container.markdown(self.text)
 
 st.title("💬 SQL Agent")
-st.caption("🚀 A SQL Query Assistant Powered by DeepSeek LLM")
+st.caption("🚀 A SQL Query Assistant Powered by DeepSeek-V3-0324")
 
 # Add system prompt editing area
 if "custom_system_prompt" not in st.session_state:
     st.session_state.custom_system_prompt = system_prompt
 
-with st.expander("Custom System Prompt", expanded=True):
+with st.expander("System Prompt", expanded=True):
     st.session_state.custom_system_prompt = st.text_area(
-        "Edit system prompt to customize AI assistant behavior",
+        label="Modify the system prompt to change the AI assistant's behavior and response style.",
         value=st.session_state.custom_system_prompt,
-        height=200
+        height=150
     )
-    st.caption("Tip: Modify the system prompt to change the AI assistant's behavior and response style.")
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "Hello, I'm your SQL assistant. How can I help you?"}]
