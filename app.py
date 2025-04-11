@@ -1,4 +1,9 @@
 import streamlit as st
+import os
+from dotenv import load_dotenv
+
+# 加载.env文件中的环境变量
+load_dotenv()
 
 # 设置页面配置
 st.set_page_config(
@@ -8,15 +13,13 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-
-# TODO: 记得删除 keys
 # 初始化session_state中的clickhouse_password（如果不存在）
 if "clickhouse_password" not in st.session_state:
-    st.session_state.clickhouse_password = ""
+    st.session_state.clickhouse_password = os.getenv("CLICKHOUSE_PASSWORD", "")
 
 # 初始化session_state中的openai_api_key（如果不存在）
 if "openai_api_key" not in st.session_state:
-    st.session_state.openai_api_key = ""
+    st.session_state.openai_api_key = os.getenv("OPENAI_API_KEY", "")
 
 
 with st.sidebar:
