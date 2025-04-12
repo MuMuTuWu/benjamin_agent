@@ -2,6 +2,9 @@ import streamlit as st
 import os
 from dotenv import load_dotenv
 
+import warnings
+warnings.filterwarnings('ignore')
+
 # 加载.env文件中的环境变量
 load_dotenv()
 
@@ -23,37 +26,33 @@ if "openai_api_key" not in st.session_state:
 
 
 with st.sidebar:
-    clickhouse_password = st.text_input(
+    # 直接使用主要的session_state变量作为key
+    st.text_input(
         "Clickhouse Password",
         value=st.session_state.clickhouse_password,
         type="password",
-        key="clickhouse_password_input"
+        key="clickhouse_password"  # 直接使用主变量作为key
     )
-    if clickhouse_password:
-        st.session_state.clickhouse_password = clickhouse_password
 
-    # 使用session中已有的值作为默认值，并在用户输入后更新session
-    openai_api_key = st.text_input(
-        "DeepSeek API Key", 
+    st.text_input(
+        "DeepSeek API Key",
         value=st.session_state.openai_api_key,
         type="password",
-        key="api_key_input"
+        key="openai_api_key"  # 直接使用主变量作为key
     )
-    if openai_api_key:
-        st.session_state.openai_api_key = openai_api_key
 
     "[Get an DeepSeek API key](https://platform.deepseek.com/api_keys)"
 
 
 pages = {
     "Blogs": [
-        st.Page("blogs/1_introduction.py", title="Introducing Benjamin.AI", icon="👋"),
-        st.Page("blogs/2_capability_validation.py", title="Capability Validation", icon="🔍"),
-        st.Page("blogs/3_agentic_view.py", title="An Agentic View of Benjamin.AI", icon="📐"),
+        st.Page("pages_blog/1_introduction.py", title="Introducing Benjamin.AI", icon="👋"),
+        st.Page("pages_blog/2_capability_validation.py", title="Capability Validation", icon="🔍"),
+        st.Page("pages_blog/3_agentic_view.py", title="An Agentic View of Benjamin.AI", icon="📐"),
     ],
     "Agents": [
-        st.Page("agents/1_sql_agent.py", title="SQL Agent", icon="🤖"),
-        st.Page("agents/2_benjamin_pro.py", title="Benjamin.AI Pro", icon="🤖"),
+        st.Page("pages_agent/1_sql_agent.py", title="SQL Agent", icon="🤖"),
+        st.Page("pages_agent/2_benjamin_pro.py", title="Benjamin.AI Pro", icon="🤖"),
     ],
 }
 
