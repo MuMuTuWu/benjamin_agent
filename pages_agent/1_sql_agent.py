@@ -49,7 +49,7 @@ tools = [
     ),
     Tool(
         name="python_repl",
-        description="执行Python代码并保留变量状态。可以访问current_df变量处理数据。",
+        description="A Python shell. Use this to execute python code and retain variable states. You can access the current_df variable to process data. Input should be a valid python command. If you want to see the output of a value, you should print it out with `print(...)`.",
         func=stateful_repl.run
     )
 ]
