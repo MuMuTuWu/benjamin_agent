@@ -8,8 +8,23 @@ with col1:
 with col2:
     st.title("Introducing Benjamin.AI")
 
-st.markdown("""
-Benjamin AI is an intelligent technology company focused on quantitative finance, dedicated to providing advanced financial analysis tools and solutions to investors and institutions. Its core products utilize cutting-edge artificial intelligence technology and data-driven methodologies to cover areas such as portfolio management, risk assessment, trading strategy development, macroeconomic analysis and stock valuation. By integrating real-time and historical data, Benjamin AI is able to provide users with efficient asset allocation optimization, trading strategy backtesting, and market insight services. As a future-oriented financial intelligence platform, Benjamin AI not only helps users improve decision-making efficiency, but also is committed to pushing the frontiers of financial technology.
-""")
+st.markdown("""**Company Focus**
+
+- An intelligent technology company focused on quantitative finance for investors and institutions.
+
+**Core products and technologies**
+
+- Utilizes cutting-edge artificial intelligence technology and data-driven methodologies.
+- Covering areas such as portfolio management, risk assessment, trading strategy development, macroeconomic analysis and stock valuation.
+
+**Functions and Services**
+
+- Provide asset allocation optimization by integrating real-time and historical data.
+- Supports trading strategy backtesting and market insight services.
+
+**Future Vision**
+
+- Improve the efficiency of users' decision-making.
+- Dedicated to advancing the development of financial technology.""")
 
 st.image("assets/1_benjamin_homepage.png")
