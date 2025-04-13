@@ -50,11 +50,11 @@ pages = {
         st.Page("pages_blog/2_capability_validation.py", title="Capability Validation", icon="🔍"),
         st.Page("pages_blog/3_agentic_view.py", title="An Agentic View of Benjamin.AI", icon="📐"),
         st.Page("pages_blog/4_ai_agent_overview.py", title="AI-Agent Overview", icon="🌐"),
-        st.Page("pages_blog/5_pricing.py", title="Pricing", icon="💰"),
+        st.Page("pages_blog/5_benjamin_pro.py", title="From Benjamin.AI to Benjamin.AI Pro+", icon="🤖"),
+        st.Page("pages_blog/6_pricing.py", title="Pricing", icon="💰"),
     ],
     "Agents": [
         st.Page("pages_agent/1_sql_agent.py", title="SQL Data Analysis Agent", icon="💬"),
-        st.Page("pages_agent/2_benjamin_pro.py", title="Benjamin.AI Pro", icon="🤖"),
     ],
 }
 

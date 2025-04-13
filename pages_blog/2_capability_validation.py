@@ -40,7 +40,7 @@ st.markdown("""
 - Conclusion and Limitations""")
 
 st.markdown("**Our team Code-Based Approach**")
-st.image("assets/validation 1.png")
+# st.image("assets/validation 1.png")
 st.image("assets/validation 2.png")
 
 st.markdown("**Benjamin.AI result**")
@@ -49,18 +49,21 @@ st.divider()
 
 st.subheader("Result comparison (TSLA Rolling beta)")
 st.markdown("""- Long-term Beta Analysis
-- Rolling Window Approach
-- Short-term vs. Long-term Volatility
-- 22-day and 252-day Beta Calculations
-- Purpose and Insights""")
-st.markdown("**Our team Code-Based Approach**")
-col1, col2 = st.columns([0.5, 0.5], gap="large")
-with col1:
-    st.image("assets/validation 5.png")
-with col2:
-    st.image("assets/validation 6.png")
-st.markdown("**Benjamin.AI result**")
-st.image("assets/validation 4.png")
+- Beta Calculations with Rolling Window Approach
+- Short-term (22-day) vs. Long-term (252-day) Volatility""")
+st.markdown("""
+|  | Code | Benjamin.AI |
+|------------|------|------------|
+| Long Term Rolling Beta | 1.51 | 1.85 |
+| Short Term Rolling Beta | 1.58 | Not Avaliable |""")
+# st.markdown("**Our team Code-Based Approach**")
+# col1, col2 = st.columns([0.5, 0.5], gap="large")
+# with col1:
+#     st.image("assets/validation 5.png")
+# with col2:
+#     st.image("assets/validation 6.png")
+# st.markdown("**Benjamin.AI result**")
+# st.image("assets/validation 4.png")
 
 st.divider()
 
