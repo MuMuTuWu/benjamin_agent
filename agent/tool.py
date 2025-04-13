@@ -24,33 +24,51 @@ class StatefulPythonREPL(PythonREPL):
 
 def generate_df_summary(df: pd.DataFrame) -> str:
     if df.empty:
-        return "查询结果为空"
+        return "Query result is empty"
     
     summary = [
-        f"📊 数据摘要（共 {len(df)} 行）",
-        f"📑 列名称：{', '.join(df.columns)}"
+        f"📊 Data Summary (Total {len(df)} rows)",
+        f"📑 Column Names: {', '.join(df.columns)}"
     ]
     
-    # 添加列类型信息
+    # Add column type information
     type_info = [f"{col}: {dtype}" for col, dtype in df.dtypes.items()]
-    summary.append(f"🔧 列类型：{' | '.join(type_info)}")
+    summary.append(f"🔧 Column Types: {' | '.join(type_info)}")
     
-    # 添加数值列统计信息
+    # Add numeric column statistics
     numeric_cols = df.select_dtypes(include='number').columns
     for col in numeric_cols:
         summary.append(
-            f"📈 {col}统计：均值={df[col].mean():.2f} "
-            f"最小={df[col].min():.2f} "
-            f"最大={df[col].max():.2f}"
+            f"📈 {col} Statistics: Mean={df[col].mean():.2f} "
+            f"Min={df[col].min():.2f} "
+            f"Max={df[col].max():.2f}"
         )
     
-    # 添加示例数据
-    summary.append("🔍 前2行示例：")
-    summary.append(df.head(2).to_string(index=False))
+    # Add sample data - dynamically adjust display rows based on column and row count
+    num_cols = len(df.columns)
+    num_rows = len(df)
+    
+    if num_cols < 5:
+        head_rows = tail_rows = min(5, num_rows // 2)
+    elif num_cols < 10:
+        head_rows = tail_rows = min(3, num_rows // 2)
+    else:
+        head_rows = tail_rows = min(2, num_rows // 2)
+    
+    if num_rows <= (head_rows + tail_rows):
+        summary.append(f"🔍 All {num_rows} rows of data:")
+        summary.append(df.to_string(index=False))
+    else:
+        summary.append(f"🔍 First {head_rows} rows sample:")
+        summary.append(df.head(head_rows).to_string(index=False))
+        
+        if tail_rows > 0:
+            summary.append(f"🔍 Last {tail_rows} rows sample:")
+            summary.append(df.tail(tail_rows).to_string(index=False))
     
     return "\n\n".join(summary)
 
-# ClickHouse SQL执行函数
+# ClickHouse SQL execution function
 def execute_sql(query: str) -> pd.DataFrame:
     db_con = clickhouse_driver.Client(
         host='ap.loclx.io',

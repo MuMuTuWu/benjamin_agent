@@ -52,7 +52,7 @@ pages = {
         st.Page("pages_blog/4_pricing.py", title="Pricing", icon="💰"),
     ],
     "Agents": [
-        st.Page("pages_agent/1_sql_agent.py", title="SQL Agent", icon="🤖"),
+        st.Page("pages_agent/1_sql_agent.py", title="SQL Data Analysis Agent", icon="💬"),
         st.Page("pages_agent/2_benjamin_pro.py", title="Benjamin.AI Pro", icon="🤖"),
     ],
 }
