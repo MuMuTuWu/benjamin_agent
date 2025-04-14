@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.title("🎯 Improvement suggestions for Benjamin.AI")
+st.title("🎯 From Benjamin.AI to Benjamin.AI Pro+")
 
 st.subheader("1. Adjust the conversation entry to improve the UX")
 st.markdown("Provide different AI - Agent entrances so that users can choose the appropriate Agent according to their needs.")
