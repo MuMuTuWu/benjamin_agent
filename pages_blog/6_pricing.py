@@ -1,6 +1,8 @@
 import streamlit as st
 
 st.markdown("<h1 style='text-align: center;'>Upgrade your plan</h1>", unsafe_allow_html=True)
+st.markdown("By evolving into a General AI-Agent, Benjamin AI can become a flexible, autonomous investment assistant, capable of addressing diverse user needs—from real-time market analysis to long-term financial planning.")
+
 st.markdown("<br>", unsafe_allow_html=True)
 
 st.html("""<!DOCTYPE html>
@@ -252,7 +254,7 @@ st.html("""<!DOCTYPE html>
                 <li class="feature-item">Extended limits on messaging, file uploads, and advanced data analysis</li>
                 <li class="feature-item">Access to deep research, multiple reasoning models (o3-mini, o1, Claude 3.7 thinking, etc.)</li>
                 <li class="feature-item">Extended access to Benjamin Agents.</li>
-                <li class="feature-item">Limited access to Benjamin.AI Pro+, a general AI agent that solves complex tasks.</li>
+                <li class="feature-item">Limited access to Benjamin.AI Pro Max, a general AI agent that solves complex tasks.</li>
             </ul>
             
             <div class="limits-text">Limits apply</div>
@@ -260,14 +262,14 @@ st.html("""<!DOCTYPE html>
         
         <!-- Pro Plan -->
         <div class="plan-card">
-            <h2 class="plan-name">Pro</h2>
+            <h2 class="plan-name">Pro Max</h2>
             <div class="price-container">
                 <span class="currency">$</span>
                 <span class="price">200</span>
                 <span class="period">USD/month</span>
             </div>
             <p class="plan-description">Get the best of Benjamin.AI with the highest level of access</p>
-            <button class="btn btn-dark">Get Pro</button>
+            <button class="btn btn-dark">Get  Max</button>
             
             <ul class="features-list">
                 <li class="feature-item">Everything in Plus</li>
@@ -275,7 +277,7 @@ st.html("""<!DOCTYPE html>
                 <li class="feature-item">Unlimited access on messaging, file uploads, and advanced data analysis</li>
                 <li class="feature-item">Unlimited access to deep research</li>
                 <li class="feature-item">Unlimited access to Benjamin Agents.</li>
-                <li class="feature-item">Unlimited access to Benjamin.AI Pro+.</li>
+                <li class="feature-item">Unlimited access to Benjamin.AI Pro Max.</li>
             </ul>
             
             <div class="limits-text">Unlimited subject to abuse guardrails. <a href="#">Learn more</a></div>

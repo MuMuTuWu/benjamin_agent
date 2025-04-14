@@ -2,6 +2,19 @@ import streamlit as st
 
 st.title("🌐 From LLMs to Agents")
 
+st.markdown(""""Agent" can be defined in several ways, but there is an important architectural distinction between workflows and agents.
+- **Workflows** are systems where LLMs and tools are orchestrated through predefined code paths.
+- **Agents**, on the other hand, are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.
+""")
+
+st.markdown("""
+### 🧱 Building block: The augmented LLM
+
+The basic building block of agentic systems is an LLM enhanced with augmentations such as retrieval, tools, and memory.
+
+![The augmented LLM](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2Fd3083d3f40bb2b6f477901cc9a240738d3dd1371-2401x1000.png&w=3840&q=75)
+""")
+
 st.markdown("""### **1. Workflow-driven Agents**
 
 Provides visual tools and modular frameworks to build reusable AI workflows for enterprises. Achieve task automation through visual process design, emphasizing rule orientation and modular expansion.
