@@ -49,7 +49,7 @@ pages = {
         st.Page("pages_blog/1_introduction.py", title="Introducing Benjamin.AI", icon="👋"),
         st.Page("pages_blog/2_capability_validation.py", title="Capability Validation", icon="🔍"),
         st.Page("pages_blog/3_agentic_view.py", title="An Agentic View of Benjamin.AI", icon="📐"),
-        st.Page("pages_blog/4_ai_agent_overview.py", title="AI-Agent Overview", icon="🌐"),
+        st.Page("pages_blog/4_ai_agent_overview.py", title="From LLMs to Agents", icon="🌐"),
         st.Page("pages_blog/5_benjamin_pro.py", title="Improvement suggestions", icon="🎯"),
         st.Page("pages_blog/6_pricing.py", title="Pricing", icon="💰"),
     ],

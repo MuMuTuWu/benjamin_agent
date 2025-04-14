@@ -63,6 +63,13 @@ These agents possess the capabilities of **autonomous decision-making** and **cr
 
 ![](https://www.anthropic.com/_next/image?url=https%3A%2F%2Fwww-cdn.anthropic.com%2Fimages%2F4zrzovbb%2Fwebsite%2F58d9f10c985c4eb5d53798dea315f7bb5ab6249e-2401x1000.png&w=3840&q=75)""")
 
+st.markdown("### 💰 It's very costly to get the cutting-edge AI-Agents")
+
+col1, col2 = st.columns([0.3, 0.7], gap="small")
+with col1:
+    st.image("assets/cost gpt pro.png", caption="ChatGPT Pro")
+with col2:
+    st.image("assets/cost manus.png", caption="Manus AI")
 
 st.subheader("📖 Summary")
 
