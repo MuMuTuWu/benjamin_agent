@@ -41,7 +41,7 @@ with st.sidebar:
         key="openai_api_key"  # 直接使用主变量作为key
     )
 
-    "[Get an DeepSeek API key](https://platform.deepseek.com/api_keys)"
+    st.markdown("[Get an DeepSeek API key](https://platform.deepseek.com/api_keys)")
 
 
 pages = {
